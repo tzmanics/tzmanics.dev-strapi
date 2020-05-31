@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "created": {
+      "type": "datetime"
+    },
+    "author": {
+      "type": "string"
+    },
+    "categories": {
+      "via": "posts",
+      "collection": "category"
+    }
+  }
+}
